@@ -51,7 +51,7 @@ function render() {
 
   if (searchElem.length !== 0) {
     const searchInArr = items.filter((elem) =>
-      elem.name.toLocaleLowerCase().startsWith(searchElem.toLocaleLowerCase()),
+      elem.name.toLocaleLowerCase().includes(searchElem.toLocaleLowerCase()),
     );
     renderCard(searchInArr);
   } else {
